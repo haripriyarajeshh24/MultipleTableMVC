@@ -12,6 +12,7 @@ namespace MultipleTableMVC.Controllers
         // GET: MultipleTable
         public ActionResult Index()
         {
+
             MVCCRUDDBEntities db = new MVCCRUDDBEntities();
             List<Product> list = db.Products.ToList();
             ViewBag.ProductList = new SelectList(list, "ProductID", "ProductName");

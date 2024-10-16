@@ -1,0 +1,28 @@
+﻿@model MultipleTableMVC.Models.ProductViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Create</h2>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+<div class="container" style="width:40%;margin-top:2%">
+    @using (Html.BeginForm("index", "MultipleTable", FormMethod.Post))
+    {
+        @*@Html.TextBoxFor(model => model.ProductID, new { @class = "form-control", @placeholder = "Order ID" })
+            <br />*@
+        @Html.TextBoxFor(model => model.ProductID, new { @class = "form-control", @placeholder = "Product ID" })
+        <br />
+        @Html.TextBoxFor(model => model.ProductName, new { @class = "form-control", @placeholder = "Product Name" })
+        <br />
+        @Html.TextBoxFor(model => model.Category, new { @class = "form-control", @placeholder = "Category" })
+        <br />
+        @Html.TextBoxFor(model => model.OrderNumber, new { @class = "form-control", @placeholder = "Order Number" })
+        <br />
+        @Html.TextBoxFor(model => model.PersonName, new { @class = "form-control", @placeholder = "Customer" })
+        <br />
+        <br />
+        <input type="submit" value="Submit" class="btn btn-block btn-primary" />
+    }
+
+</div>

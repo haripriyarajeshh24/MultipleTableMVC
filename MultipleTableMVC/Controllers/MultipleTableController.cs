@@ -18,6 +18,7 @@ namespace MultipleTableMVC.Controllers
             ViewBag.ProductList = new SelectList(list, "ProductID", "ProductName");
             return View();
 
+
         }
         [HttpPost]
         public ActionResult Index(ProductViewModel model)
